@@ -1,0 +1,51 @@
+main: me.chocolf.moneyfrommobs.MoneyFromMobs
+name: MoneyFromMobs
+version: 4.4
+api-version: 1.13
+author: Chocolf
+description: Makes mobs drop money with looting multiplier
+depend: [Vault]
+softdepend: [WorldEdit,WorldGuard,MythicMobs,PlaceholderAPI,RoseStacker,LorinthsRpgMobs,LevelledMobs]
+commands:
+  MfmHelp:
+    description: Displays all commands for Money From Mobs
+    permission: MoneyFromMobs.help
+    usage: "Usage: /MfmHelp"
+    aliases: [mfm]
+  MfmReload:
+    description: Reloads the config file of Money From Mobs
+    permission: MoneyFromMobs.reload
+    usage: "Usage: /MfmReload"
+  MfmDrop:
+    description: Drops a specified amount of money on the ground
+    permission: MoneyFromMobs.drop
+    usage: "Usage: /MfmDrop <AmountToDrop> [NumberOfDrops] [World] [PosX] [PosY] [PosZ]"
+  MfmMute:
+    description: Mutes messages sent by the plugin when a player picks up money
+    permission: MoneyFromMobs.mute
+    usage: "Usage: /MfmMute"
+  MfmClear:
+    description: Clears all money from the ground. Can also be used to remove glitched holographic messages
+    permission: MoneyFromMobs.clear
+    usage: "Usage: /MfmClear"
+  MfmEvent:
+    description: Starts/Stops an event that increases the amount of money dropped by mobs for a certain amount of time.
+    permission: MoneyFromMobs.event
+    usage: "Usage: /MfmEvent <Start/Stop> [Percentage Increase] [Hours] [Minutes] [Seconds]"
+
+permissions:
+  MoneyFromMobs.use:
+    description: Allows player to kill mobs to obtain money and pick money up.
+    default: true
+  MoneyFromMobs.PreventMoneyDropOnDeath:
+    description: Stops player from dropping money when they die
+  MoneyFromMobs.reload:
+    description: Allows player to use /MfmReload
+  MoneyFromMobs.drop:
+    description: Allows player to use /MfmDrop <AmountToDrop> [NumberOfDrops]
+  MoneyFromMobs.mute:
+    description: Allows player to use /MfmMute
+  MoneyFromMobs.clear:
+    description: Allows player to use /MfmClear
+  MoneyFromMobs.event:
+    description: Allows player to use /MfmEvent <Start/Stop> [Percentage Increase] [Hours] [Minutes] [Seconds]

@@ -1,0 +1,10 @@
+# Add your MythicMobs here using the template below.
+
+Skeleton_King:
+  Enabled: true
+  Min: 150
+  Max: 150
+  DropChance: 100
+  NumberOfDrops: 1-3
+  OnlyOnKill: true
+  
